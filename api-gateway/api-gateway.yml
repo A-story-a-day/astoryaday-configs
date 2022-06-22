@@ -8,9 +8,9 @@ security-constraints:
     - /webjars/swagger-ui/**
     - /swagger-ui**
     - /v3/api-docs/**
+    - /api/v1/accounts
     - /api/v1/accounts/**
-    - /api/v1/notifications/apple
-    - /api/v1/notifications/google
+    - /api/v1/notifications/**
     - /api/v1/stories/day
 
 cors:
