@@ -3,3 +3,5 @@ spring:
     url: jdbc:postgresql://database-dev.ct5eyzdctyxi.eu-north-1.rds.amazonaws.com:5432/customer-service?ssl=false
     username: postgres
     password: '{cipher}8e3764449731bda97db73193860137680bccf1752437a328d92068292631ca5d18f7e4dfc9ffbb2dd071c74a036e30bd'
+auth:
+  url: https://auth-dev.astoryaday.se
