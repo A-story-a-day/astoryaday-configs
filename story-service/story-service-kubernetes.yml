@@ -1,5 +1,5 @@
 spring:
   datasource:
-    url: jdbc:postgresql://database.ct5eyzdctyxi.eu-north-1.rds.amazonaws.com:5432/story-service?ssl=false
+    url: jdbc:postgresql://database-dev.ct5eyzdctyxi.eu-north-1.rds.amazonaws.com:5432/story-service?ssl=false
     username: postgres
     password: TBD

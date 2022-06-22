@@ -2,7 +2,7 @@ spring.servlet.multipart.max-file-size: 10MB
 amazon:
   accessKey: TBD
   secretKey: TBD
-  bucketName: astoryaday-multimedia-manager
+  bucketName: astoryaday-dev-multimedia-manager
   region: eu-north-1
 springdoc.api-docs.path: /api/v1/multimedia/api-doc
 management.endpoints.web.exposure.include: '*'
