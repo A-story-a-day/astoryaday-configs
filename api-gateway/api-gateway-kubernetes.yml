@@ -1,0 +1,24 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: story-service
+          uri: http://story-service
+          predicates:
+            - Path=/api/v1/stories, /api/v1/stories/**, /api/v1/story-service/api-doc
+            - Method=GET,PUT,PATCH,DELETE
+        - id: customer-service
+          uri: http://customer-service
+          predicates:
+            - Path=/api/v1/accounts, /api/v1/accounts/**, /api/v1/notifications/**, /api/v1/customer-service/api-doc
+            - Method=GET,PUT,PATCH,DELETE
+        - id: multimedia
+          uri: http://localhost:8097
+          predicates:
+            - Path=/api/v1/multimedia, /api/v1/multimedia-manager/**
+        - id: openapi
+          uri: http://api-gateway
+          predicates:
+            - Path=/v3/api-docs/**
+          filters:
+            - RewritePath=/v3/api-docs/(?<path>.*), /api/v1//$\{path}/api-doc

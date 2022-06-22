@@ -1,0 +1,26 @@
+server.port: 8082
+spring:
+  application:
+    name: story-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/story-service?ssl=false
+    username: postgres
+    password: password
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: ${auth.url}/auth/realms/${auth.realm}
+auth:
+  url: http://localhost:8180
+  realm: a-story-a-day
+logging:
+  level:
+    com.agenatech: DEBUG
+    org.springframework.security: DEBUG
+    org.springframework.web: DEBUG

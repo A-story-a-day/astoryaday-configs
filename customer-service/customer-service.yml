@@ -1,0 +1,35 @@
+server.port: 8083
+spring:
+  application:
+    name: customer-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/customer-service?ssl=false
+    username: postgres
+    password: password
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: ${auth.url}/auth/realms/${auth.realm}
+auth:
+  url: http://localhost:8180
+  realm: a-story-a-day
+apple:
+  url: https://api.storekit.itunes.apple.com
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 10000
+        readTimeout: 10000
+        loggerLevel: basic
+logging:
+  level:
+    com.agenatech: DEBUG
+    org.springframework.security: DEBUG
+    org.springframework.web: DEBUG
