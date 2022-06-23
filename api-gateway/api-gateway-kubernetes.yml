@@ -13,7 +13,7 @@ spring:
             - Path=/api/v1/accounts, /api/v1/accounts/**, /api/v1/notifications/**, /api/v1/customer-service/api-doc
             - Method=GET,PUT,PATCH,DELETE
         - id: multimedia
-          uri: http://localhost:8097
+          uri: http://multimedia-manager
           predicates:
             - Path=/api/v1/multimedia, /api/v1/multimedia-manager/**
         - id: openapi
