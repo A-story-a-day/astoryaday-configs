@@ -11,14 +11,6 @@ spring:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
       ddl-auto: update
-  security:
-    oauth2:
-      resourceserver:
-        jwt:
-          issuer-uri: ${auth.url}/auth/realms/${auth.realm}
-auth:
-  url: http://localhost:8180
-  realm: a-story-a-day
 apple:
   url: https://api.storekit.itunes.apple.com
 feign:
