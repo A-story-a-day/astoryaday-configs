@@ -40,7 +40,7 @@ spring:
         locator:
           enabled: false
       routes:
-        - id: story-user
+        - id: story-service
           uri: http://localhost:8082
           predicates:
             - Path=/api/v1/accounts/*/stories, /api/v1/story-service/api-doc
@@ -75,7 +75,7 @@ spring:
             auth-roles:
               - story-admin
               - story-author
-        - id: multimedia-api-doc
+        - id: multimedia-manager
           uri: http://localhost:8097
           predicates:
             - Path=/api/v1/multimedia-manager/api-doc

@@ -2,7 +2,7 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: story-user
+        - id: story-service
           uri: http://story-service
           predicates:
             - Path=/api/v1/accounts/*/stories, /api/v1/story-service/api-doc
@@ -37,7 +37,7 @@ spring:
             auth-roles:
               - story-admin
               - story-author
-        - id: multimedia-api-doc
+        - id: multimedia-manager
           uri: http://multimedia-manager
           predicates:
             - Path=/api/v1/multimedia-manager/api-doc
