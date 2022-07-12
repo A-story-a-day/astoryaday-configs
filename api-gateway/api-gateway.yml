@@ -127,7 +127,7 @@ logging:
     reactor.netty.http.client: DEBUG
 
 springdoc:
-  packages-to-scan: com.agenatech
+  packages-to-scan: com.agenatech.customer.controller, com.agenatech.story.controller, com.agenatech.multimedia.controller
   custom:
     ignored-routes:
       - openapi
