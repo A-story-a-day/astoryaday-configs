@@ -5,7 +5,7 @@ spring:
         - id: story-user
           uri: http://story-service
           predicates:
-            - Path=/api/v1/stories/day
+            - Path=/api/v1/accounts/*/stories
             - Method=GET
         - id: story-author
           uri: http://story-service

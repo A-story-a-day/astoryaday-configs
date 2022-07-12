@@ -11,7 +11,7 @@ security-constraints:
     - /api/v1/accounts
     - /api/v1/accounts/**
     - /api/v1/notifications/**
-    - /api/v1/stories/day
+    - /api/v1/accounts/*/stories
 
 cors:
   allowedOrigins: "*"
@@ -43,7 +43,7 @@ spring:
         - id: story-user
           uri: http://localhost:8082
           predicates:
-            - Path=/api/v1/stories/day
+            - Path=/api/v1/accounts/*/stories
             - Method=GET
         - id: story-author
           uri: http://localhost:8082
