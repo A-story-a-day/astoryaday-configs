@@ -43,27 +43,43 @@ spring:
         - id: story-user
           uri: http://localhost:8082
           predicates:
-            - Path=/api/v1/accounts/*/stories
+            - Path=/api/v1/accounts/*/stories, /api/v1/story-service/api-doc
             - Method=GET
         - id: story-author
           uri: http://localhost:8082
           predicates:
             - Path=/api/v1/stories, /api/v1/stories/**
             - Method=POST,GET,PUT,PATCH,DELETE
+          metadata:
+            auth-roles:
+              - story-admin
+              - story-author
         - id: story-admin
           uri: http://localhost:8082
           predicates:
             - Path=/api/v1/stories/*/release
             - Method=PATCH
+          metadata:
+            auth-roles:
+              - story-admin
         - id: customer-service
           uri: http://localhost:8083
           predicates:
-            - Path=/api/v1/accounts, /api/v1/accounts/**, /api/v1/notifications/**
+            - Path=/api/v1/accounts, /api/v1/accounts/**, /api/v1/notifications/**, /api/v1/customer-service/api-doc
             - Method=POST,GET
-        - id: multimedia
+        - id: multimedia-author
           uri: http://localhost:8097
           predicates:
-            - Path=/api/v1/multimedia, /api/v1/multimedia-manager/**
+            - Path=/api/v1/multimedia, /api/v1/multimedia/**
+          metadata:
+            auth-roles:
+              - story-admin
+              - story-author
+        - id: multimedia-api-doc
+          uri: http://localhost:8097
+          predicates:
+            - Path=/api/v1/multimedia-manager/api-doc
+            - Method=GET
         - id: openapi
           uri: http://localhost:8081
           predicates:
@@ -115,3 +131,6 @@ springdoc:
   custom:
     ignored-routes:
       - openapi
+      - story-author
+      - story-admin
+      - multimedia-author

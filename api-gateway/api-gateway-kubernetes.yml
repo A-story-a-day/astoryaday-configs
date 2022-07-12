@@ -5,7 +5,7 @@ spring:
         - id: story-user
           uri: http://story-service
           predicates:
-            - Path=/api/v1/accounts/*/stories
+            - Path=/api/v1/accounts/*/stories, /api/v1/story-service/api-doc
             - Method=GET
         - id: story-author
           uri: http://story-service
@@ -27,16 +27,21 @@ spring:
         - id: customer-service
           uri: http://customer-service
           predicates:
-            - Path=/api/v1/accounts, /api/v1/accounts/**, /api/v1/notifications/**
+            - Path=/api/v1/accounts, /api/v1/accounts/**, /api/v1/notifications/**, /api/v1/customer-service/api-doc
             - Method=POST,GET
-        - id: multimedia
+        - id: multimedia-author
           uri: http://multimedia-manager
           predicates:
-            - Path=/api/v1/multimedia, /api/v1/multimedia-manager/**
+            - Path=/api/v1/multimedia, /api/v1/multimedia/**
           metadata:
             auth-roles:
               - story-admin
               - story-author
+        - id: multimedia-api-doc
+          uri: http://multimedia-manager
+          predicates:
+            - Path=/api/v1/multimedia-manager/api-doc
+            - Method=GET
         - id: openapi
           uri: http://api-gateway
           predicates:

@@ -4,7 +4,7 @@ amazon:
   secretKey: '{cipher}f54ed3ad2c8201c7d7aceb618dc729ad88a5d866ace950c25505b14359a1674b62367034df5fbf58458919039451f8bcd3bec03a722ae97a2aaefe6d84f44b44'
   bucketName: astoryaday-dev-multimedia-manager
   region: eu-north-1
-springdoc.api-docs.path: /api/v1/multimedia/api-doc
+springdoc.api-docs.path: /api/v1/multimedia-manager/api-doc
 management.endpoints.web.exposure.include: '*'
 logging.level:
   com.agenatech: DEBUG

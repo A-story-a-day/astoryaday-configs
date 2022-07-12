@@ -20,6 +20,7 @@ feign:
         connectTimeout: 10000
         readTimeout: 10000
         loggerLevel: basic
+springdoc.api-docs.path: /api/v1/customer-service/api-doc
 logging:
   level:
     com.agenatech: DEBUG
