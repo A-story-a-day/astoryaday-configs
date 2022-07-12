@@ -16,3 +16,5 @@ logging:
     com.agenatech: DEBUG
     org.springframework.security: DEBUG
     org.springframework.web: DEBUG
+account:
+  url: http://localhost:8083
