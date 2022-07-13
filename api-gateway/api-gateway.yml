@@ -12,6 +12,7 @@ security-constraints:
     - /api/v1/accounts/**
     - /api/v1/notifications/**
     - /api/v1/accounts/*/stories
+    - /api/v1/accounts/*/bonus-stories
 
 cors:
   allowedOrigins: "*"
@@ -43,7 +44,7 @@ spring:
         - id: story-service
           uri: http://localhost:8082
           predicates:
-            - Path=/api/v1/accounts/*/stories, /api/v1/story-service/api-doc
+            - Path=/api/v1/accounts/*/stories, /api/v1/accounts/*/bonus-stories, /api/v1/story-service/api-doc
             - Method=GET
         - id: story-author
           uri: http://localhost:8082
@@ -57,7 +58,7 @@ spring:
         - id: story-admin
           uri: http://localhost:8082
           predicates:
-            - Path=/api/v1/stories/*/release
+            - Path=/api/v1/stories/*/release, /api/v1/stories/*/disable
             - Method=PATCH
           metadata:
             auth-roles:

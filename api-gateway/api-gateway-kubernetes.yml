@@ -5,7 +5,7 @@ spring:
         - id: story-service
           uri: http://story-service
           predicates:
-            - Path=/api/v1/accounts/*/stories, /api/v1/story-service/api-doc
+            - Path=/api/v1/accounts/*/stories, /api/v1/accounts/*/bonus-stories, /api/v1/story-service/api-doc
             - Method=GET
         - id: story-author
           uri: http://story-service
@@ -19,7 +19,7 @@ spring:
         - id: story-admin
           uri: http://story-service
           predicates:
-            - Path=/api/v1/stories/*/release
+            - Path=/api/v1/stories/*/release, /api/v1/stories/*/disable
             - Method=PATCH
           metadata:
             auth-roles:
