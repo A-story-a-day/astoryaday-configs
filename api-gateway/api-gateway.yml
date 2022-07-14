@@ -49,17 +49,18 @@ spring:
         - id: story-author
           uri: http://localhost:8082
           predicates:
-            - Path=/api/v1/stories, /api/v1/stories/**
-            - Method=POST,GET,PUT,PATCH,DELETE
+            - Path=/api/v1/authors/me/stories, /api/v1/authors/me/stories/**
+            - Method=POST,GET,PUT,PATCH
           metadata:
             auth-roles:
-              - story-admin
               - story-author
+          filters:
+            - AddPrincipalToPathFilter
         - id: story-admin
           uri: http://localhost:8082
           predicates:
-            - Path=/api/v1/stories/*/release, /api/v1/stories/*/disable
-            - Method=PATCH
+            - Path=/api/v1/stories, /api/v1/stories/**, /api/v1/stories/*/release, /api/v1/stories/*/disable
+            - Method=GET,PATCH,DELETE
           metadata:
             auth-roles:
               - story-admin
@@ -74,7 +75,6 @@ spring:
             - Path=/api/v1/multimedia, /api/v1/multimedia/**
           metadata:
             auth-roles:
-              - story-admin
               - story-author
         - id: multimedia-manager
           uri: http://localhost:8097
