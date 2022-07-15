@@ -8,10 +8,11 @@ security-constraints:
     - /webjars/swagger-ui/**
     - /swagger-ui**
     - /v3/api-docs/**
-    - /api/v1/accounts/**
-    - /api/v1/notifications/apple
-    - /api/v1/notifications/google
-    - /api/v1/stories/day
+    - /api/v1/preview-stories
+    - /api/v1/accounts/*/status
+    - /api/v1/notifications/**
+    - /api/v1/accounts/*/stories
+    - /api/v1/accounts/*/bonus-stories
 
 cors:
   allowedOrigins: "*"
@@ -43,17 +44,43 @@ spring:
         - id: story-service
           uri: http://localhost:8082
           predicates:
-            - Path=/api/v1/stories, /api/v1/stories/**, /api/v1/story-service/api-doc
-            - Method=GET,PUT,PATCH,DELETE
+            - Path=/api/v1/accounts/*/stories, /api/v1/accounts/*/bonus-stories, /api/v1/preview-stories, /api/v1/story-service/api-doc
+            - Method=GET
+        - id: story-author
+          uri: http://localhost:8082
+          predicates:
+            - Path=/api/v1/authors/me/stories, /api/v1/authors/me/stories/**
+            - Method=POST,GET,PUT,PATCH
+          metadata:
+            auth-roles:
+              - story-author
+          filters:
+            - AddPrincipalToPathFilter
+        - id: story-admin
+          uri: http://localhost:8082
+          predicates:
+            - Path=/api/v1/stories, /api/v1/stories/**, /api/v1/stories/*/release, /api/v1/stories/*/disable
+            - Method=GET,PATCH,DELETE
+          metadata:
+            auth-roles:
+              - story-admin
         - id: customer-service
           uri: http://localhost:8083
           predicates:
             - Path=/api/v1/accounts, /api/v1/accounts/**, /api/v1/notifications/**, /api/v1/customer-service/api-doc
-            - Method=GET,PUT,PATCH,DELETE
-        - id: multimedia
+            - Method=POST,GET
+        - id: multimedia-author
           uri: http://localhost:8097
           predicates:
-            - Path=/api/v1/multimedia, /api/v1/multimedia-manager/**
+            - Path=/api/v1/multimedia, /api/v1/multimedia/**
+          metadata:
+            auth-roles:
+              - story-author
+        - id: multimedia-manager
+          uri: http://localhost:8097
+          predicates:
+            - Path=/api/v1/multimedia-manager/api-doc
+            - Method=GET
         - id: openapi
           uri: http://localhost:8081
           predicates:
@@ -101,7 +128,10 @@ logging:
     reactor.netty.http.client: DEBUG
 
 springdoc:
-  packages-to-scan: com.agenatech
+  packages-to-scan: com.agenatech.customer.controller, com.agenatech.story.controller, com.agenatech.multimedia.controller
   custom:
     ignored-routes:
       - openapi
+      - story-author
+      - story-admin
+      - multimedia-author

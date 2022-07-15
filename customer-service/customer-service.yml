@@ -11,16 +11,10 @@ spring:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
       ddl-auto: update
-  security:
-    oauth2:
-      resourceserver:
-        jwt:
-          issuer-uri: ${auth.url}/auth/realms/${auth.realm}
-auth:
-  url: http://localhost:8180
-  realm: a-story-a-day
 apple:
   url: https://api.storekit.itunes.apple.com
+story:
+  url: http://localhost:8082
 feign:
   client:
     config:
@@ -28,6 +22,7 @@ feign:
         connectTimeout: 10000
         readTimeout: 10000
         loggerLevel: basic
+springdoc.api-docs.path: /api/v1/customer-service/api-doc
 logging:
   level:
     com.agenatech: DEBUG

@@ -11,16 +11,11 @@ spring:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
       ddl-auto: update
-  security:
-    oauth2:
-      resourceserver:
-        jwt:
-          issuer-uri: ${auth.url}/auth/realms/${auth.realm}
-auth:
-  url: http://localhost:8180
-  realm: a-story-a-day
 logging:
   level:
     com.agenatech: DEBUG
     org.springframework.security: DEBUG
     org.springframework.web: DEBUG
+account:
+  url: http://localhost:8083
+springdoc.api-docs.path: /api/v1/story-service/api-doc

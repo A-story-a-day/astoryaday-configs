@@ -3,3 +3,5 @@ spring:
     url: jdbc:postgresql://database.ct5eyzdctyxi.eu-north-1.rds.amazonaws.com:5432/customer-service?ssl=false
     username: postgres
     password: '{cipher}0b67afc5c5c97c00120d488a59f13163c734ec7a56f05708864a58901cf2dc28ad8b9cca634b404f71081247a7d470af'
+story:
+  url: http://story-service
