@@ -8,12 +8,11 @@ security-constraints:
     - /webjars/swagger-ui/**
     - /swagger-ui**
     - /v3/api-docs/**
-    - /api/v1/accounts
-    - /api/v1/accounts/**
+    - /api/v1/preview-stories
+    - /api/v1/accounts/*/status
     - /api/v1/notifications/**
     - /api/v1/accounts/*/stories
     - /api/v1/accounts/*/bonus-stories
-    - /api/v1/preview-stories
 
 cors:
   allowedOrigins: "*"
