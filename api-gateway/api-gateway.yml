@@ -9,11 +9,14 @@ security-constraints:
     - /swagger-ui**
     - /v3/api-docs/**
     - /api/v1/preview-stories
+    - /api/v1/accounts
+    - /api/v1/notifications/**
     - /api/v1/accounts/*/status
     - /api/v1/accounts/*/cancel
-    - /api/v1/notifications/**
     - /api/v1/accounts/*/stories
     - /api/v1/accounts/*/bonus-stories
+    - /api/v1/accounts/*/favorite-stories
+    - /api/v1/accounts/*/favorite-stories/*
 
 cors:
   allowedOrigins: "*"
