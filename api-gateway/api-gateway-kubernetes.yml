@@ -5,7 +5,7 @@ spring:
         - id: story-service
           uri: http://story-service
           predicates:
-            - Path=/api/v1/accounts/*/stories, /api/v1/accounts/*/bonus-stories, /api/v1/preview-stories, /api/v1/story-service/api-doc
+            - Path=/api/v1/accounts/*/stories, /api/v1/accounts/*/bonus-stories, /api/v1/preview-stories, /api/v1/preview-bonus-stories, /api/v1/story-service/api-doc
             - Method=GET
         - id: story-author
           uri: http://story-service
@@ -28,8 +28,18 @@ spring:
         - id: customer-service
           uri: http://customer-service
           predicates:
-            - Path=/api/v1/accounts, /api/v1/accounts/**, /api/v1/notifications/**, /api/v1/customer-service/api-doc
-            - Method=POST,GET
+            - Path=/api/v1/accounts/*/status, /api/v1/customer-service/api-doc
+            - Method=GET
+        - id: customer-service-creation
+          uri: http://customer-service
+          predicates:
+            - Path=/api/v1/accounts, /api/v1/notifications/*
+            - Method=POST
+        - id: customer-service-favorite-stories
+          uri: http://customer-service
+          predicates:
+            - Path=/api/v1/accounts/*/favorite-stories, /api/v1/accounts/*/favorite-stories/*
+            - Method=POST,GET,DELETE
         - id: multimedia-author
           uri: http://multimedia-manager
           predicates:
