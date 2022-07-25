@@ -22,9 +22,9 @@ spring:
           predicates:
             - Path=/api/v1/stories, /api/v1/stories/**, /api/v1/stories/*/release, /api/v1/stories/*/disable
             - Method=GET,PATCH,DELETE
-          metadata:
-            auth-roles:
-              - story-admin
+#          metadata:
+#            auth-roles:
+#              - story-admin
         - id: customer-service
           uri: http://customer-service
           predicates:
