@@ -26,5 +26,3 @@ springdoc.api-docs.path: /api/v1/customer-service/api-doc
 logging:
   level:
     com.agenatech: DEBUG
-    org.springframework.security: DEBUG
-    org.springframework.web: DEBUG
