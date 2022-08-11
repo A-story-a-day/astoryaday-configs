@@ -13,6 +13,7 @@ spring:
       ddl-auto: update
 apple:
   url: https://api.storekit.itunes.apple.com
+  verify-receipt-url: https://sandbox.itunes.apple.com/verifyReceipt
 story:
   url: http://localhost:8082
 feign:
