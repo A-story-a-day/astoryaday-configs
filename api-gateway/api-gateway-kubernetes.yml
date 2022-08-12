@@ -33,7 +33,8 @@ spring:
         - id: customer-service-creation
           uri: http://customer-service
           predicates:
-            - Path=/api/v1/accounts, /api/v1/notifications/*
+            - Path=/api/v1/accounts
+#            - , /api/v1/notifications/*
             - Method=POST
         - id: customer-service-favorite-stories
           uri: http://customer-service
