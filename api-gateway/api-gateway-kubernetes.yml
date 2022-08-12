@@ -28,18 +28,8 @@ spring:
         - id: customer-service
           uri: http://customer-service
           predicates:
-            - Path=/api/v1/accounts/*/status, /api/v1/customer-service/api-doc
-            - Method=GET
-        - id: customer-service-creation
-          uri: http://customer-service
-          predicates:
-            - Path=/api/v1/accounts, /api/v1/notifications/*
-            - Method=POST
-        - id: customer-service-favorite-stories
-          uri: http://customer-service
-          predicates:
-            - Path=/api/v1/accounts/*/favorite-stories, /api/v1/accounts/*/favorite-stories/*
-            - Method=POST,GET,DELETE
+            - Path=/api/v1/accounts, /api/v1/accounts/**, /api/v1/notifications/*, /api/v1/customer-service/api-doc
+            - Method=GET,POST,DELETE
         - id: multimedia-author
           uri: http://multimedia-manager
           predicates:
