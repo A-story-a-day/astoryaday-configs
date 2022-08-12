@@ -11,13 +11,9 @@ security-constraints:
     - /api/v1/preview-stories
     - /api/v1/preview-bonus-stories
     - /api/v1/accounts
-    - /api/v1/notifications/**
-    - /api/v1/accounts/*/status
-    - /api/v1/accounts/*/cancel
-    - /api/v1/accounts/*/stories
-    - /api/v1/accounts/*/bonus-stories
-    - /api/v1/accounts/*/favorite-stories
-    - /api/v1/accounts/*/favorite-stories/*
+    - /api/v1/accounts/**
+#    - /api/v1/notifications/**
+
 
 cors:
   allowedOrigins: "*"
@@ -74,11 +70,11 @@ spring:
           predicates:
             - Path=/api/v1/accounts/*/status, /api/v1/customer-service/api-doc
             - Method=GET
-#        - id: customer-service-creation
-#          uri: http://localhost:8083
-#          predicates:
-#            - Path=/api/v1/accounts, /api/v1/notifications/*
-#            - Method=POST
+        - id: customer-service-creation
+          uri: http://localhost:8083
+          predicates:
+            - Path=/api/v1/accounts, /api/v1/notifications/*
+            - Method=POST
         - id: customer-service-favorite-stories
           uri: http://localhost:8083
           predicates:
