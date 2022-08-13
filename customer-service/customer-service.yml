@@ -15,6 +15,11 @@ apple:
   url: https://sandbox.itunes.apple.com
   verify-receipt-url: verifyReceipt
   secret: 1234
+google:
+  url: https://androidpublisher.googleapis.com
+  verify-receipt-url: androidpublisher/v3/applications/${google.package-name}/purchases/subscriptions/{subscriptionId}/tokens/{token}
+  package-name: com.astoryadayab.astoryaday
+  secret: 1234
 story:
   url: http://localhost:8082
 feign:
