@@ -11,7 +11,7 @@ spring:
           uri: http://story-service
           predicates:
             - Path=/api/v1/authors/me/stories, /api/v1/authors/me/stories/**
-            - Method=POST,GET,PUT,PATCH
+            - Method=POST,GET,PUT,PATCH,DELETE
           metadata:
             auth-roles:
               - story-author
@@ -21,7 +21,7 @@ spring:
           uri: http://story-service
           predicates:
             - Path=/api/v1/stories, /api/v1/stories/*/release, /api/v1/stories/*/disable, /api/v1/stories/admin/**
-            - Method=GET,PATCH,DELETE
+            - Method=GET,PATCH
           metadata:
             auth-roles:
               - story-admin
