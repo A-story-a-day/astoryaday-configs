@@ -5,3 +5,7 @@ spring:
     password: '{cipher}0b67afc5c5c97c00120d488a59f13163c734ec7a56f05708864a58901cf2dc28ad8b9cca634b404f71081247a7d470af'
 story:
   url: http://story-service
+apple:
+  url: https://buy.itunes.apple.com
+  secret: '{cipher}43a4044186b1d3093b0fad5181a9f4cfff7f69132546574d448caf15395f54f1afc69c8ee0f715a7b69b8261e463d7acfe3513958a2039e4de433a078d1ee8b8'
+

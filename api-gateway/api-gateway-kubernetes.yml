@@ -5,13 +5,13 @@ spring:
         - id: story-service
           uri: http://story-service
           predicates:
-            - Path=/api/v1/accounts/*/stories, /api/v1/accounts/*/bonus-stories, /api/v1/preview-stories, /api/v1/preview-bonus-stories, /api/v1/story-service/api-doc
+            - Path=/api/v1/accounts/*/stories, /api/v1/stories/*, /api/v1/accounts/me/bonus-stories, /api/v1/preview-stories, /api/v1/preview-bonus-stories, /api/v1/story-service/api-doc
             - Method=GET
         - id: story-author
           uri: http://story-service
           predicates:
             - Path=/api/v1/authors/me/stories, /api/v1/authors/me/stories/**
-            - Method=POST,GET,PUT,PATCH
+            - Method=POST,GET,PUT,PATCH,DELETE
           metadata:
             auth-roles:
               - story-author
@@ -20,26 +20,16 @@ spring:
         - id: story-admin
           uri: http://story-service
           predicates:
-            - Path=/api/v1/stories, /api/v1/stories/**, /api/v1/stories/*/release, /api/v1/stories/*/disable
-            - Method=GET,PATCH,DELETE
+            - Path=/api/v1/stories, /api/v1/stories/*/release, /api/v1/stories/*/disable, /api/v1/stories/admin/**
+            - Method=GET,PATCH
           metadata:
             auth-roles:
               - story-admin
         - id: customer-service
           uri: http://customer-service
           predicates:
-            - Path=/api/v1/accounts/*/status, /api/v1/customer-service/api-doc
-            - Method=GET
-        - id: customer-service-creation
-          uri: http://customer-service
-          predicates:
-            - Path=/api/v1/accounts, /api/v1/notifications/*
-            - Method=POST
-        - id: customer-service-favorite-stories
-          uri: http://customer-service
-          predicates:
-            - Path=/api/v1/accounts/*/favorite-stories, /api/v1/accounts/*/favorite-stories/*
-            - Method=POST,GET,DELETE
+            - Path=/api/v1/accounts, /api/v1/accounts/**, /api/v1/notifications/*, /api/v1/customer-service/api-doc
+            - Method=GET,POST,DELETE
         - id: multimedia-author
           uri: http://multimedia-manager
           predicates:
