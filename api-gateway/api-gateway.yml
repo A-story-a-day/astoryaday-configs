@@ -28,7 +28,7 @@ spring:
     gateway:
       httpclient:
         connect-timeout: 3000
-        response-timeout: 7s
+        response-timeout: 50s
       forwarded:
         enabled: true
       x-forwarded:
