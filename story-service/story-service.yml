@@ -14,8 +14,7 @@ spring:
 logging:
   level:
     com.agenatech: DEBUG
-    org.springframework.security: DEBUG
-    org.springframework.web: DEBUG
+
 account:
   url: http://localhost:8083
 springdoc.api-docs.path: /api/v1/story-service/api-doc
