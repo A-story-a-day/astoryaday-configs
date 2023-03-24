@@ -7,5 +7,6 @@ story:
   url: http://story-service
 apple:
   url: https://buy.itunes.apple.com
+  url-sandbox: https://sandbox.itunes.apple.com
   secret: '{cipher}43a4044186b1d3093b0fad5181a9f4cfff7f69132546574d448caf15395f54f1afc69c8ee0f715a7b69b8261e463d7acfe3513958a2039e4de433a078d1ee8b8'
 
