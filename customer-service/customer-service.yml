@@ -13,6 +13,7 @@ spring:
       ddl-auto: update
 apple:
   url: https://sandbox.itunes.apple.com
+  url-sandbox: https://sandbox.itunes.apple.com
   verify-receipt-url: verifyReceipt
   secret: 1234
 google:
