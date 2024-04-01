@@ -47,7 +47,7 @@ spring:
         - id: story-service
           uri: http://localhost:8082
           predicates:
-            - Path=/api/v1/accounts/*/stories, /api/v1/accounts/*/bonus-stories, /api/v1/preview-stories, /api/v1/preview-bonus-stories, /api/v1/story-service/api-doc, /api/v1/stories-release-dates/*
+            - Path=/api/v1/accounts/*/stories, /api/v1/accounts/*/bonus-stories, /api/v1/preview-stories, /api/v1/preview-bonus-stories, /api/v1/story-service/api-doc, /api/v1/stories-release-dates/*, /api/v1/stories/timeline/month/*/year/*
             - Method=GET
         - id: story-author
           uri: http://localhost:8082
