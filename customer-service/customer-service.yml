@@ -19,7 +19,7 @@ apple:
 google:
   url: https://androidpublisher.googleapis.com
   verify-receipt-url: androidpublisher/v3/applications/${google.package-name}/purchases/subscriptions/{subscriptionId}/tokens/{token}
-  package-name: com.astoryadayab.astoryaday
+  package-name: com.astoryadayab.storyaday
   secret: 1234
 story:
   url: http://localhost:8082
