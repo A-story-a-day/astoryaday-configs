@@ -38,5 +38,5 @@ ios.PrivateKey: '{cipher}bc76dfea8e71840c3f92c90460b4fafacc1483755ffb9d3d37099da
 ios.PublicKey: '{cipher}0f46c8f55fa90a6d9a172b606b00c1122eaee10ea6663a3f5f2922b87fd1bbbec27759c0026254d8cac915948a32455d37fbbceee41b242db3dad132bcacde5d4e56fd6e34484654621746f6c31315ac32c5a0a4c6931e3f719529f4584cfdc3d5bb08908f0b8e54f997f6edea3b756489b694da4849cc31464506e2b7c4c539ffb2ef727d55727544901a3637898d7589abde710365ef1e4e2bd37c811222b3837adf773ebef52a17f2675c4983761950edec3df7c3ab4789401f8b798f409c'
 ios.keyId: '{cipher}d4f58f25950c6eec4ccc3daa72b9891fb8333461976f9880c18f2c7db88bd2a0'
 ios.issuerId: '{cipher}9ca58c4606a7138cd1427f508987c0c54dff759edff7762c9446acb0343c87938b7c4d8b99064a9cf9412d2c8c84ecc9e8e385128f4126034a05175339ac007a'
-ios.subscriptionApiUrl: 'https://api.storekit-sandbox.itunes.apple.com/inApps/v1/subscriptions/'
-ios.transactionApiUrl: 'https://api.storekit-sandbox.itunes.apple.com/inApps/v1/transactions/'
+ios.subscriptionApiUrl: 'https://api.storekit.itunes.apple.com/inApps/v1/subscriptions/'
+ios.transactionApiUrl: 'https://api.storekit.itunes.apple.com/inApps/v1/transactions/'
