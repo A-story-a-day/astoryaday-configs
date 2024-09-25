@@ -12,7 +12,7 @@ spring:
     hibernate:
       ddl-auto: update
 apple:
-  url: https://itunes.apple.com
+  url: https://buy.itunes.apple.com
   url-sandbox: https://sandbox.itunes.apple.com
   verify-receipt-url: verifyReceipt
   secret: 1234
