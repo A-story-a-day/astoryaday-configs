@@ -40,3 +40,7 @@ ios.keyId: '{cipher}8ac7408a1659a03f208ceeeceac85e14adc5282f6166b8de33cdcc8c48d5
 ios.issuerId: '{cipher}f4821cf9cc376294fde3cc3a4aa510ba6e97808f4764a88addd4e4fd0898685574fb3c01c7a4c15f32f150f43f69d544f4e497d9d206f7ffb91340ba79456e09'
 ios.subscriptionApiUrl: 'https://api.storekit.itunes.apple.com/inApps/v1/subscriptions/'
 ios.transactionApiUrl: 'https://api.storekit.itunes.apple.com/inApps/v1/transactions/'
+ios.sandboxSubscriptionApiUrl: 'https://api.storekit-sandbox.itunes.apple.com/inApps/v1/subscriptions/'
+ios.sandboxTransactionApiUrl: 'https://api.storekit-sandbox.itunes.apple.com/inApps/v1/transactions/'
+ios.verifyReceipt: 'https://buy.itunes.apple.com/verifyReceipt'
+ios.verifySandboxReceipt: 'https://sandbox.itunes.apple.com/verifyReceipt'
