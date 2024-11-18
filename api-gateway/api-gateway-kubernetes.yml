@@ -20,7 +20,7 @@ spring:
         - id: story-admin
           uri: http://story-service
           predicates:
-            - Path=/api/v1/stories, /api/v1/stories/*/release, /api/v1/stories/*/disable, /api/v1/stories/admin/**
+            - Path=/api/v1/stories, /api/v1/stories/archived, /api/v1/stories/*/release, /api/v1/stories/*/disable, /api/v1/stories/admin/**
             - Method=GET,PATCH
           metadata:
             auth-roles:
