@@ -20,7 +20,7 @@ spring:
         - id: story-admin
           uri: http://story-service
           predicates:
-            - Path=/api/v1/stories, /api/v1/stories/archived, /api/v1/stories/*/release, /api/v1/stories/*/disable, /api/v1/stories/admin/**
+            - Path=/api/v1/stories, /api/v1/stories/*/release, /api/v1/stories/*/disable, /api/v1/stories/admin/**
             - Method=GET,PATCH
           metadata:
             auth-roles:
@@ -28,12 +28,7 @@ spring:
         - id: customer-service
           uri: http://customer-service
           predicates:
-            - Path=/api/v1/accounts, /api/v1/accounts/**, /api/v1/notifications/*, /api/v1/customer-service/api-doc, /api/v1/accounts/transaction/*, /api/v1/gift-subscriptions, /api/v1/gift-subscriptions/redeem
-            - Method=GET,POST,DELETE
-        - id: customer-service-updated
-          uri: http://customer-service
-          predicates:
-            - Path=/api/v2/accounts, /api/v2/accounts/**, /api/v2/notifications/*, /api/v2/customer-service/api-doc, /api/v2/accounts/transaction/*, /api/v2/gift-subscriptions, /api/v2/gift-subscriptions/redeem
+            - Path=/api/v1/accounts, /api/v1/accounts/**, /api/v1/notifications/*, /api/v1/customer-service/api-doc, /api/v1/accounts/transaction/*, /api/v1/accounts/gift-subscriptions, /api/v1/accounts/gift-subscriptions/redeem, /api/v2/accounts, /api/v2/accounts/**, /api/v2/notifications/*, /api/v2/customer-service/api-doc, /api/v2/accounts/transaction/*, /api/v2/gift-subscriptions, /api/v2/gift-subscriptions/redeem
             - Method=GET,POST,DELETE
         - id: multimedia-author
           uri: http://multimedia-manager

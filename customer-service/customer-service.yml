@@ -1,3 +1,7 @@
+spring.servlet.multipart.max-file-size: 1000MB
+spring.servlet.multipart.max-request-size: 1000MB
+spring.cloud.gateway.httpclient.codec.multipart.enabled: true
+spring.cloud.gateway.httpclient.max-request-size: 1000MB
 server.port: 8083
 spring:
   application:
@@ -12,14 +16,14 @@ spring:
     hibernate:
       ddl-auto: update
 apple:
-  url: https://sandbox.itunes.apple.com
+  url: https://buy.itunes.apple.com
   url-sandbox: https://sandbox.itunes.apple.com
   verify-receipt-url: verifyReceipt
   secret: 1234
 google:
   url: https://androidpublisher.googleapis.com
   verify-receipt-url: androidpublisher/v3/applications/${google.package-name}/purchases/subscriptions/{subscriptionId}/tokens/{token}
-  package-name: com.astoryadayab.astoryaday
+  package-name: com.asab.storyaday
   secret: 1234
 story:
   url: http://localhost:8082
