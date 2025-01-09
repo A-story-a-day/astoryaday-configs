@@ -17,6 +17,8 @@ security-constraints:
     - /api/v1/stories/*
     - /api/v1/notifications/**
     - /api/v1/stories-release-dates/*
+    - /api/v2/accounts
+    - /api/v2/accounts/**
 
 
 cors:
