@@ -5,7 +5,7 @@ spring:
         - id: story-service
           uri: http://story-service
           predicates:
-            - Path=/api/v1/accounts/*/stories, /api/v1/stories/*, /api/v1/accounts/me/bonus-stories, /api/v1/preview-stories, /api/v1/preview-bonus-stories, /api/v1/story-service/api-doc, /api/v1/stories-release-dates/*, /api/v1/stories/timeline/month/*/year/*
+            - Path=/api/v1/accounts/*/stories, /api/v1/stories/*, /api/v1/accounts/me/bonus-stories, /api/v1/preview-stories, /api/v1/preview-bonus-stories, /api/v1/story-service/api-doc, /api/v1/stories-release-dates/*, /api/v1/stories/timeline/month/*/year/*, /api/v2/accounts/*/stories, /api/v2/accounts/*/bonus-stories
             - Method=GET
         - id: story-author
           uri: http://story-service
