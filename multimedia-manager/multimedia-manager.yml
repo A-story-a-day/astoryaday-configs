@@ -3,8 +3,8 @@ spring.servlet.multipart:
   max-file-size: 100MB
   max-request-size: 100MB
 amazon:
-  accessKey: '{cipher}874a496a52f76d56f6c9f5f9d2e8f95bdb49940f9ae1ccda3a2dca611a2d537ddc6ab93c1a39ce8d974e4def52e5c042'
-  secretKey: '{cipher}f54ed3ad2c8201c7d7aceb618dc729ad88a5d866ace950c25505b14359a1674b62367034df5fbf58458919039451f8bcd3bec03a722ae97a2aaefe6d84f44b44'
+  accessKey: '{cipher}87d7aff435f766b4a24dfb9e5065faf7b45c813e249289d2abe75695104ea423f28744e79f2443a79b5a656168ca4f17'
+  secretKey: '{cipher}67a574e90d1ca44e73cfaf0801644c0f20bf32c9e5773f98b0954c16651bc05aae95a08b37932f8966997232621d7fbf6cc8a60f91636657a3cf5576b8e68ced'
   bucketName: astoryaday-dev-multimedia-manager
   region: eu-north-1
 springdoc.api-docs.path: /api/v1/multimedia-manager/api-doc
