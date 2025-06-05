@@ -25,3 +25,5 @@ happyscribe:
   api-url: https://www.happyscribe.com/api/v1
 multimedia:
   url: https://api-dev.astoryaday.se/api/v1/multimedia
+groq.api-key: '{cipher}654555e7e423923559f33a85e3abfe4fbbc9b568df70980d71b427906144edc6285224e37fe2c083aa371f4f22ea39d4b80091a6b824690b7ed2d83ca9b5482c3357be5ec13f2f03cf053c951eacd666'
+groq.api-url: 'https://api.groq.com/openai/v1/chat/completions'
