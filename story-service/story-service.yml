@@ -22,3 +22,11 @@ logging:
 account:
   url: http://localhost:8083
 springdoc.api-docs.path: /api/v1/story-service/api-doc
+happyscribe:
+  api-key: '{cipher}4443618e5ddf6d093947a3d4253987d35e1bc36bc6c411d3a24050f183ebf6abad346cdf09029c82ff1e3907d916c316'
+  organization-id: '{cipher}a14a9634b3eabd15ad00e37e7e2b1270f32b30fe01cb95122b3a0f662e50abe6'
+  api-url: https://www.happyscribe.com/api/v1
+multimedia:
+  url: https://api-dev.astoryaday.se/api/v1/multimedia
+groq.api-key: '{cipher}22e1f5faf17a65338d0e3a32d401d17ad9e740123e0c68cea502fd18f62d9abeb3bbe2e76862f931fa7040a1ad07f5bdcfe7138e33ce691207d7ff34a45628d326b571bab84928157285d9faa9b920ae'
+groq.api-url: 'https://api.groq.com/openai/v1/chat/completions'
