@@ -10,7 +10,7 @@ spring:
         - id: story-author
           uri: http://customer-service
           predicates:
-            - Path=/api/v1/authors/me/stories, /api/v1/authors/me/stories/**
+            - Path=/api/v1/authors/*/stories, /api/v1/authors/*/stories/**
             - Method=POST,GET,PUT,PATCH,DELETE
           metadata:
             auth-roles:
