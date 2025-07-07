@@ -16,6 +16,8 @@ security-constraints:
     - /api/v1/accounts/**
     - /api/v1/stories/*
     - /api/v1/stories/*/glossary
+    - /api/v1/authors/*/stories
+    - /api/v1/authors/*/stories/**
     - /api/v1/dictionary
     - /api/v1/dictionary/*
     - /api/v1/notifications/**
@@ -59,7 +61,7 @@ spring:
         - id: story-author
           uri: http://localhost:8083
           predicates:
-            - Path=/api/v1/authors/me/stories, /api/v1/authors/me/stories/**
+            - Path=/api/v1/authors/*/stories, /api/v1/authors/*/stories/**
             - Method=POST,GET,PUT,PATCH
           metadata:
             auth-roles:
