@@ -3,14 +3,14 @@ spring:
     gateway:
       routes:
         - id: story-service
-          uri: http://story-service
+          uri: http://customer-service
           predicates:
             - Path=/api/v1/accounts/*/stories, /api/v1/stories/*, /api/v1/accounts/me/bonus-stories, /api/v1/preview-stories, /api/v1/preview-bonus-stories, /api/v1/stories/*/glossary, /api/v1/story-service/api-doc, /api/v1/stories-release-dates/*, /api/v1/stories/timeline/month/*/year/*, /api/v2/accounts/*/stories, /api/v2/accounts/*/bonus-stories
             - Method=GET
         - id: story-author
-          uri: http://story-service
+          uri: http://customer-service
           predicates:
-            - Path=/api/v1/authors/me/stories, /api/v1/authors/me/stories/**
+            - Path=/api/v1/authors/*/stories, /api/v1/authors/*/stories/**
             - Method=POST,GET,PUT,PATCH,DELETE
           metadata:
             auth-roles:
@@ -18,7 +18,7 @@ spring:
           filters:
             - AddPrincipalToPathFilter
         - id: story-admin
-          uri: http://story-service
+          uri: http://customer-service
           predicates:
             - Path=/api/v1/stories, /api/v1/stories/*/release, /api/v1/stories/*/disable, /api/v1/stories/admin/**
             - Method=GET,PATCH
@@ -28,7 +28,7 @@ spring:
         - id: customer-service
           uri: http://customer-service
           predicates:
-            - Path=/api/v1/accounts, /api/v1/accounts/**, /api/v1/notifications/*, /api/v1/customer-service/api-doc, /api/v1/accounts/transaction/*, /api/v1/accounts/gift-subscriptions, /api/v1/accounts/gift-subscriptions/redeem, /api/v2/accounts, /api/v2/accounts/**, /api/v2/notifications/*, /api/v2/customer-service/api-doc, /api/v2/accounts/transaction/*, /api/v2/accounts/gift-subscriptions, /api/v2/accounts/gift-subscriptions/redeem
+            - Path=/api/v1/accounts, /api/v1/accounts/**, /api/v1/notifications/*, /api/v1/customer-service/api-doc, /api/v1/accounts/transaction/*, /api/v1/accounts/gift-subscriptions, /api/v1/accounts/gift-subscriptions/redeem, /api/v2/accounts, /api/v2/accounts/**, /api/v2/notifications/*, /api/v2/customer-service/api-doc, /api/v2/accounts/transaction/*, /api/v2/accounts/gift-subscriptions, /api/v2/accounts/gift-subscriptions/redeem, /api/v2/accounts/definitions, /api/v1/dictionary, /api/v1/dictionary/*
             - Method=GET,POST,DELETE
         - id: multimedia-author
           uri: http://multimedia-manager
