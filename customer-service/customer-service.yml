@@ -51,6 +51,6 @@ groq.api-url: 'https://api.groq.com/openai/v1/chat/completions'
 multimedia:
   url: https://api-dev.astoryaday.se/api/v1/multimedia
 happyscribe:
-  api-key: '{cipher}88c6de294f596ccba1823032d3cc634a65be7b1e04e3363fa1e4fa83b699598e678cae26e7a79ee964eb011cebd22b2e'
-  organization-id: '{cipher}94c3d43e057b41cd90458568a4c5b5d4eca7be9b4edd2ef5dab509b4c5eead8a'
+  api-key: '{cipher}9b28da35e364b006deeb0ce8601779582c5ebdc6c4d496cad3e6f6d122c16842c0cb78d5b6ab6b3465f645ee9deda5f8'
+  organization-id: '{cipher}79dc1c42a105e5f0dfadb7c8d2b636edf407393ad9db619047f50672798bdf98'
   api-url: https://www.happyscribe.com/api/v1
