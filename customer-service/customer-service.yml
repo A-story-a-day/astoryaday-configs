@@ -54,3 +54,10 @@ happyscribe:
   api-key: '{cipher}88c6de294f596ccba1823032d3cc634a65be7b1e04e3363fa1e4fa83b699598e678cae26e7a79ee964eb011cebd22b2e'
   organization-id: '{cipher}94c3d43e057b41cd90458568a4c5b5d4eca7be9b4edd2ef5dab509b4c5eead8a'
   api-url: https://www.happyscribe.com/api/v1
+slack:
+  bot:
+    token: '{cipher}7ee2b8082fc9263e859dfdef0291e8477abbb83da9f7aeb91347e6e44a9653ebeae19c64c96266853b8ce1b68fc69d7002c40e691ca4b962dd828fc0d4eedc24090a25b80f35b7a097cd1ff24f8a4acf'
+  channel:
+    id: '{cipher}5f06391c2549a388fd7fd0e06150df0d24ce9a5368cdd315318be852819ce3dd'
+  user:
+    id: '{cipher}7eb968fb0c31e708a233f84e12212a1ce7c0f795825e5b3ade45dfe4f95ba601'
