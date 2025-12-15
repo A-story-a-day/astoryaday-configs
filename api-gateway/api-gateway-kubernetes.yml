@@ -30,6 +30,11 @@ spring:
           predicates:
             - Path=/api/v1/accounts, /api/v1/accounts/**, /api/v1/notifications/*, /api/v1/customer-service/api-doc, /api/v1/accounts/transaction/*, /api/v1/accounts/gift-subscriptions, /api/v1/accounts/gift-subscriptions/redeem, /api/v2/accounts, /api/v2/accounts/**, /api/v2/notifications/*, /api/v2/customer-service/api-doc, /api/v2/accounts/transaction/*, /api/v2/accounts/gift-subscriptions, /api/v2/accounts/gift-subscriptions/redeem, /api/v2/accounts/definitions, /api/v1/dictionary, /api/v1/dictionary/*
             - Method=GET,POST,DELETE
+        - id: subscription-service
+          uri: http://customer-service
+          predicates:
+            - Path=/api/v1/subscriptions/*/offers/*/eligibility, /api/v1/subscriptions/*/offers/*/discount
+            - Method=POST,GET
         - id: multimedia-author
           uri: http://multimedia-manager
           predicates:
