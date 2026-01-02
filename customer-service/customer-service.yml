@@ -57,7 +57,7 @@ multimedia:
   url: https://api.astoryaday.se/api/v1/multimedia
 happyscribe:
   api-key: '{cipher}95a5e1790c8401c50ac4ecc7235109b444e07810ce0d26730e99c871adc7e5158d59f2edf8cb05d356fa55441b985566'
-  organization-id: '{cipher}0f4df6c45dcf534c375b75d80ca2704bfc4387df6d97330dce25be0a8138e033'
+  organization-id: '{cipher}716a38c61188cf6af008b5713e6798ab213ddb842c1eb736da350f159e6b87dc'
   api-url: https://www.happyscribe.com/api/v1
 slack:
   bot:
