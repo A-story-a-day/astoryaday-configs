@@ -70,3 +70,16 @@ slack:
     id: '{cipher}7eb968fb0c31e708a233f84e12212a1ce7c0f795825e5b3ade45dfe4f95ba601'
 ios.purchaseKeyId: '{cipher}7013c8b1f1118521ad0570be55c7b4d00804319b66f8cc566ae0dc2fb136f45f'
 ios.PurchasePrivateKey: '{cipher}316f1b4b005715db66d57f22575a48b516cbf0018649fc7fa2b12d9caedec754b70304781faa9a50ac09780c771f022581c01744857fd7453162347f586a5bccaed4c34295d3476d43d7e497a6065793aaafd530f912ddfd51c321212906e269a13d147744f709d64a60d5fac9a23f51e2d4b8f2c229ff75e9806590ccb15ded1c8fbe93554ffd81a96a039fb7d70914cd419d5292e51f5fbddf19c6e242a22d54663913068e44e76951361f221d67651bfcba6ef9c88fd93619030ae2aa073fa976b169905f6434300636b4d7a183f1a0e2eff6b9bcce1fa0b15a085ed10c96c10281cd3b37799177655ffccef6a9201350b1a38280020afe2ea51f3fefecb32c3e63ac06b042d1bedc07800f012c31'
+spring.servlet.multipart:
+  enabled: true
+  max-file-size: 1000MB
+  max-request-size: 1000MB
+amazon:
+  accessKey: '{cipher}9a966866fb5504925581e8d7e132edf075379a497b870dfa6dc34428ab04cc66111a383e83252c03b0778a1c10647f60'
+  secretKey: '{cipher}9b6ac7939c35fc6058016419b99b3b9ccb28b8cd18efe50e66eaccafd64da2e20186b3db49f8ba8079683eb13aa91ccd9e6b4253a12a08e67b7042bbacd96353'
+  bucketName: astoryaday-multimedia-manager
+  region: eu-north-1
+management.endpoints.web.exposure.include: '*'
+health:
+  config:
+    enabled: false
