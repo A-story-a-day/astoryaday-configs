@@ -125,28 +125,10 @@ spring:
             - RewritePath=/v3/api-docs/(?<path>.*), /api/v1//$\{path}/api-doc
   security:
     oauth2:
-      client:
-        registration:
-          keycloak:
-            provider: keycloak
-            client-id: web
-            authorization-grant-type: authorization_code
-            redirect-uri: ${keycloak-client.server-url}/login/oauth2/code/keycloak
-            scope: openid
-        provider:
-          keycloak:
-            authorization-uri: ${keycloak-client.server-url}/realms/${keycloak-client.realm}/protocol/openid-connect/auth
-            token-uri: ${keycloak-client.server-url}/realms/${keycloak-client.realm}/protocol/openid-connect/token
-            user-info-uri: ${keycloak-client.server-url}/realms/${keycloak-client.realm}/protocol/openid-connect/userinfo
-            jwk-set-uri: ${keycloak-client.server-url}/realms/${keycloak-client.realm}/protocol/openid-connect/certs
-            user-name-attribute: name
-            user-info-authentication-method: header
       resourceserver:
         jwt:
-          jwk-set-uri: ${keycloak-client.server-url}/realms/${keycloak-client.realm}/protocol/openid-connect/certs
-keycloak-client:
-  server-url: https://auth-dev.astoryaday.se/auth
-  realm: a-story-a-day
+          jwk-set-uri: https://www.googleapis.com/service_accounts/v1/jwk/securetoken@system.gserviceaccount.com
+          issuer-uri: '{cipher}74b0e6201e3f5cc9a5bc030891430baefd06e3e33df0e35864ef6228f6942a317d18cddd4f34cca77a266e215f69de3d5541e16e1d0eabfbc842fe3695c13f0b'
 management:
   endpoints:
     web:
