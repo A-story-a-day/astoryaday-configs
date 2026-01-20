@@ -31,7 +31,7 @@ spring:
             auth-roles:
               - story-admin
         - id: story-admin-roles
-          uri: http://localhost:8083
+          uri: http://customer-service
           predicates:
             - Path=/api/v1/users/*/roles
             - Method=POST,PUT
