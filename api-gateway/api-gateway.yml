@@ -85,6 +85,14 @@ spring:
           metadata:
             auth-roles:
               - story-admin
+        - id: story-admin-roles
+          uri: http://localhost:8083
+          predicates:
+            - Path=api/v1/users/*/roles
+            - Method=POST, PUT
+          metadata:
+            auth-roles:
+            - story-admin
         - id: customer-service
           uri: http://localhost:8083
           predicates:
