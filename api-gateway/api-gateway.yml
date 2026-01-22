@@ -26,6 +26,8 @@ security-constraints:
     - /api/v2/accounts
     - /api/v2/accounts/**
     - /api/v2/accounts/apple/receipt/transaction
+    - /api/v1/subscriptions
+    - /api/v1/subscriptions/*/offers
     - /api/v1/subscriptions/*/offers/*/eligibility
     - /api/v1/subscriptions/*/offers/*/discount
 
@@ -111,7 +113,7 @@ spring:
         - id: subscription-service
           uri: http://localhost:8083
           predicates:
-            - Path=/api/v1/subscriptions/*/offers/*/eligibility, /api/v1/subscriptions/*/offers/*/discount
+            - Path=/api/v1/subscriptions, /api/v1/subscriptions/*/offers, /api/v1/subscriptions/*/offers/*/eligibility, /api/v1/subscriptions/*/offers/*/discount
             - Method=POST,GET
         - id: multimedia-author
           uri: http://localhost:8083
