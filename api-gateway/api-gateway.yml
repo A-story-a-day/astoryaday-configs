@@ -26,6 +26,8 @@ security-constraints:
     - /api/v2/accounts/apple/receipt/transaction
     - /api/v2/accounts
     - /api/v2/accounts/**
+    - /api/v1/subscriptions
+    - /api/v1/subscriptions/*/offers
     - /api/v1/subscriptions/*/offers/*/eligibility
     - /api/v1/subscriptions/*/offers/*/discount
 
