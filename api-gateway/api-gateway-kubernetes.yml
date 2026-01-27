@@ -33,7 +33,7 @@ spring:
         - id: subscription-service
           uri: http://customer-service
           predicates:
-            - Path=/api/v1/subscriptions/*/offers/*/eligibility, /api/v1/subscriptions/*/offers/*/discount
+            - Path=/api/v1/subscriptions, /api/v1/subscriptions/*/offers, /api/v1/subscriptions/*/offers/*/eligibility, /api/v1/subscriptions/*/offers/*/discount
             - Method=POST,GET
         - id: multimedia-author
           uri: http://multimedia-manager
