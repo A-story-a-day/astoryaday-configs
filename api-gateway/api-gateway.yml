@@ -102,14 +102,14 @@ spring:
             - Path=/api/v1/subscriptions/*/offers/*/eligibility, /api/v1/subscriptions/*/offers/*/discount
             - Method=POST,GET
         - id: multimedia-author
-          uri: http://localhost:8097
+          uri: http://localhost:8083
           predicates:
             - Path=/api/v1/multimedia, /api/v1/multimedia/**
           metadata:
             auth-roles:
               - story-author
         - id: multimedia-manager
-          uri: http://localhost:8097
+          uri: http://localhost:8083
           predicates:
             - Path=/api/v1/multimedia-manager/api-doc
             - Method=GET
