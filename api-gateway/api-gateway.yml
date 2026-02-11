@@ -23,9 +23,9 @@ security-constraints:
     - /api/v1/notifications/**
     - /api/v1/stories-release-dates/*
     - /api/v1/stories/release-checker
-    - /api/v2/accounts/apple/receipt/transaction
     - /api/v2/accounts
     - /api/v2/accounts/**
+    - /api/v2/accounts/apple/receipt/transaction
     - /api/v1/subscriptions
     - /api/v1/subscriptions/*/offers
     - /api/v1/subscriptions/*/offers/*/eligibility
@@ -63,6 +63,22 @@ spring:
           predicates:
             - Path=/api/v1/accounts/*/stories, /api/v1/accounts/*/bonus-stories, /api/v1/preview-stories, /api/v1/preview-bonus-stories, /api/v1/stories/*/glossary, /api/v1/story-service/api-doc, /api/v1/stories-release-dates/*, /api/v1/stories/timeline/month/*/year/*, /api/v2/accounts/*/stories, /api/v2/accounts/*/bonus-stories, /api/v1/stories/release-checker, /api/v2/accounts/apple/receipt/transaction
             - Method=GET
+        - id: story-files
+          uri: http://localhost:8083
+          predicates:
+            - Path=/api/v1/stories/*/files, /api/v1/stories/*/files/*
+            - Method=GET, POST, DELETE
+          metadata:
+            auth-roles:
+              - story-admin
+        - id: school-stories
+          uri: http://localhost:8083
+          predicates:
+            - Path=/api/v1/school/stories, /api/v1/school/stories/top, /api/v1/school/stories/hero, /api/v1/school/stories/*
+            - Method=GET, POST, PUT, PATCH, DELETE
+          metadata:
+            auth-roles:
+              - story-admin, story-teacher
         - id: story-author
           uri: http://localhost:8083
           predicates:
@@ -70,7 +86,7 @@ spring:
             - Method=POST,GET,PUT,PATCH
           metadata:
             auth-roles:
-              - story-author
+              - story-admin
           filters:
             - AddPrincipalToPathFilter
         - id: story-admin
@@ -78,6 +94,14 @@ spring:
           predicates:
             - Path=/api/v1/stories, /api/v1/stories/**, /api/v1/stories/*/release, /api/v1/stories/*/disable
             - Method=GET,PATCH,DELETE
+          metadata:
+            auth-roles:
+              - story-admin
+        - id: story-admin-roles
+          uri: http://localhost:8083
+          predicates:
+            - Path=/api/v1/users/*/roles
+            - Method=POST,PUT
           metadata:
             auth-roles:
               - story-admin
@@ -107,7 +131,7 @@ spring:
             - Path=/api/v1/multimedia, /api/v1/multimedia/**
           metadata:
             auth-roles:
-              - story-author
+              - story-admin
         - id: multimedia-manager
           uri: http://localhost:8083
           predicates:
@@ -121,28 +145,10 @@ spring:
             - RewritePath=/v3/api-docs/(?<path>.*), /api/v1//$\{path}/api-doc
   security:
     oauth2:
-      client:
-        registration:
-          keycloak:
-            provider: keycloak
-            client-id: web
-            authorization-grant-type: authorization_code
-            redirect-uri: ${keycloak-client.server-url}/login/oauth2/code/keycloak
-            scope: openid
-        provider:
-          keycloak:
-            authorization-uri: ${keycloak-client.server-url}/realms/${keycloak-client.realm}/protocol/openid-connect/auth
-            token-uri: ${keycloak-client.server-url}/realms/${keycloak-client.realm}/protocol/openid-connect/token
-            user-info-uri: ${keycloak-client.server-url}/realms/${keycloak-client.realm}/protocol/openid-connect/userinfo
-            jwk-set-uri: ${keycloak-client.server-url}/realms/${keycloak-client.realm}/protocol/openid-connect/certs
-            user-name-attribute: name
-            user-info-authentication-method: header
       resourceserver:
         jwt:
-          jwk-set-uri: ${keycloak-client.server-url}/realms/${keycloak-client.realm}/protocol/openid-connect/certs
-keycloak-client:
-  server-url: https://auth.astoryaday.se/auth
-  realm: a-story-a-day
+          jwk-set-uri: https://www.googleapis.com/service_accounts/v1/jwk/securetoken@system.gserviceaccount.com
+          issuer-uri: '{cipher}5f0c11fede4a5446dbae49a0b98cdfe2ce1b9bc573bb58f5d08cefba6c6fdee767dcb44a3b26c124b153847696fadb4526239c93a77c0477105ef0aa3be8c0b6'
 management:
   endpoints:
     web:
