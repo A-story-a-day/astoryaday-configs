@@ -30,6 +30,9 @@ security-constraints:
     - /api/v1/subscriptions/*/offers
     - /api/v1/subscriptions/*/offers/*/eligibility
     - /api/v1/subscriptions/*/offers/*/discount
+    - /api/v1/school/stories
+    - /api/v1/school/stories/top
+    - /api/v1/school/stories/hero
 
 
 cors:
