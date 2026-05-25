@@ -33,7 +33,9 @@ security-constraints:
     - /api/v1/school/stories
     - /api/v1/school/stories/top
     - /api/v1/school/stories/hero
-
+    - /api/v1/sso/skolon/webhook-52f96f9acc100f09dd9644e171cce09f70057f5d
+    - /api/v1/sso/skolon/callback
+    - /api/v1/sso/skolon/login
 
 cors:
   allowedOrigins: "*"
