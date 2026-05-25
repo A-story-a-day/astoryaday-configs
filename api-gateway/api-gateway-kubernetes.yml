@@ -60,7 +60,7 @@ spring:
             - Path=/api/v1/subscriptions, /api/v1/subscriptions/*/offers, /api/v1/subscriptions/*/offers/*/eligibility, /api/v1/subscriptions/*/offers/*/discount
             - Method=POST,GET
         - id: skolon-service
-          uri: http://localhost:8083
+          uri: http://customer-service
           predicates:
             - Path=/api/api/v1/sso/skolon/webhook-52f96f9acc100f09dd9644e171cce09f70057f5d, /api/v1/sso/skolon/callback, /api/v1/sso/skolon/login
             - Method=GET, POST
