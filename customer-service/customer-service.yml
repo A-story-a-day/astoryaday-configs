@@ -87,7 +87,7 @@ skolon:
   client-secret: '{cipher}1c7f7cc13fc9d4259e717986123c2357c0823d2502ab83fa9cab23e901f5d42d223df0434b637c0bc85cf07c2023a3914da8e41a35492f0f830f111a930aaf12e75d084b9173f1fe1544bc2fa9c96d1a'
   callback-url: https://api-dev.astoryaday.se/api/v1/sso/skolon/callback
   webhook-path: /api/v1/sso/skolon/webhook-52f96f9acc100f09dd9644e171cce09f70057f5d
-  post-login-redirect-url: https://schools.astoryaday.com/
+  post-login-redirect-url: https://asad-schools-landing-do32r.ondigitalocean.app/
 management.endpoints.web.exposure.include: '*'
 health:
   config:
