@@ -10,7 +10,7 @@ spring:
         - id: story-files
           uri: http://customer-service
           predicates:
-            - Path=/api/v1/stories/*/files, /api/v1/stories/*/files/*, /api/v1/stories/*/subtitles, /api/v1/stories/import
+            - Path=/api/v1/stories/*/files, /api/v1/stories/*/files/*, /api/v1/stories/*/subtitles, /api/v1/admin/stories/import
             - Method=GET, POST, DELETE
           metadata:
             auth-roles:
