@@ -92,3 +92,11 @@ management.endpoints.web.exposure.include: '*'
 health:
   config:
     enabled: false
+story-import:
+  enabled: false
+  cron: '0 0 6,18 * * ?'
+  author-id: story-importer
+  escalation-window-days: 14
+  drive-root-folder-id: '{cipher}67949847d92db517ca4cbab4895193ca2ba5faa399ed39965402350ca62c476fdd4996478926629713bce1de23ac072b061140ac35113d4f943195b7d43d2298'
+  sheets-spreadsheet-id: '{cipher}be6f1aa6426c87fc94d6a0f95ff5e495ebeafe9dfd95d4b873abc8340a139021dd1f3e4216acf7124c4dc77f4707a8f89e3c489b9b1838cb28f84d13c0f23f21'
+  sheets-range: 'Stories!A2:K'

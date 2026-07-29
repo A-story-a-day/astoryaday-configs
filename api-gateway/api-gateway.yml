@@ -72,7 +72,7 @@ spring:
         - id: story-files
           uri: http://localhost:8083
           predicates:
-            - Path=/api/v1/stories/*/files, /api/v1/stories/*/files/*, /api/v1/stories/*/subtitles
+            - Path=/api/v1/stories/*/files, /api/v1/stories/*/files/*, /api/v1/stories/*/subtitles, /api/v1/stories/import
             - Method=GET, POST, DELETE
           metadata:
             auth-roles:
