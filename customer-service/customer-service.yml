@@ -97,7 +97,7 @@ health:
   config:
     enabled: false
 story-import:
-  enabled: false
+  enabled: true
   cron: '0 0 6,18 * * ?'
   author-id: story-importer
   escalation-window-days: 14
