@@ -117,7 +117,7 @@ spring:
           uri: http://localhost:8083
           predicates:
             - Path=/api/v1/accounts/*/status, /api/v1/customer-service/api-doc, /api/v1/accounts/transaction/*, /api/v1/accounts/gift-subscriptions, /api/v1/accounts/gift-subscriptions/redeem, /api/v2/accounts, /api/v2/accounts/**, /api/v2/accounts/*/favorite-stories, /api/v2/accounts/*/favorite-stories/*, /api/v2/accounts/gift-subscriptions, /api/v2/accounts/gift-subscriptions/redeem, /api/v2/accounts/definitions, /api/v1/dictionary, /api/v1/dictionary/*, /api/v2/accounts/*/promo-subscriptions
-            - Method=GET
+            - Method=GET, POST
         - id: customer-service-creation
           uri: http://localhost:8083
           predicates:
