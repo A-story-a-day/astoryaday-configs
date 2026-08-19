@@ -121,7 +121,7 @@ spring:
         - id: customer-service-creation
           uri: http://localhost:8083
           predicates:
-            - Path=/api/v1/accounts, /api/v1/notifications/*, /api/v2/accounts/*/promo-subscriptions/expiration-acknowledged
+            - Path=/api/v1/accounts, /api/v1/notifications/*, /api/v2/accounts/*/promo-subscriptions/expiration-acknowledged, /api/v2/accounts/*/promo-subscriptions/cancel 
             - Method=POST
         - id: customer-service-favorite-stories
           uri: http://localhost:8083
