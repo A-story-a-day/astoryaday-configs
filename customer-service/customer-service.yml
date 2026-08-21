@@ -100,3 +100,17 @@ story-import:
   drive-root-folder-id: '{cipher}67949847d92db517ca4cbab4895193ca2ba5faa399ed39965402350ca62c476fdd4996478926629713bce1de23ac072b061140ac35113d4f943195b7d43d2298'
   sheets-spreadsheet-id: '{cipher}be6f1aa6426c87fc94d6a0f95ff5e495ebeafe9dfd95d4b873abc8340a139021dd1f3e4216acf7124c4dc77f4707a8f89e3c489b9b1838cb28f84d13c0f23f21'
   sheets-range: 'Stories!A2:K'
+story-import:
+  enabled: true
+  cron: '0 0 6,18 * * ?'
+  sources:
+    - name: general
+      school: false
+      drive-root-folder-id: '{cipher}67949847d92db517ca4cbab4895193ca2ba5faa399ed39965402350ca62c476fdd4996478926629713bce1de23ac072b061140ac35113d4f943195b7d43d2298'
+      sheets-spreadsheet-id: '{cipher}be6f1aa6426c87fc94d6a0f95ff5e495ebeafe9dfd95d4b873abc8340a139021dd1f3e4216acf7124c4dc77f4707a8f89e3c489b9b1838cb28f84d13c0f23f21'
+      sheets-range: 'Stories!A2:G'
+    - name: school
+      school: true
+      drive-root-folder-id: '{cipher}c65dbd075393ab06bb93fa6ba2e6199399fd8b9bd3025b0af45c5e7166a0af0286ebe90420368f42a53dc5c90410f91c45ec600d7ebc1b81a2a6c498cc5d3d57'
+      sheets-spreadsheet-id: '{cipher}db05dbc55c4c598b7f8e460cb8266f28360811a57f5fa2acc1e56589354351765d2d40f7d7e6911a8b46dcef30af02a634a83fb3b1a454e5a542e526942e2a3b'
+      sheets-range: 'Stories!A2:H'
