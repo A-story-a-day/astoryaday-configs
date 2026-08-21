@@ -93,7 +93,7 @@ health:
   config:
     enabled: false
 story-import:
-  enabled: true
+  enabled: false
   cron: '0 0 6,18 * * ?'
   sources:
     - name: general
